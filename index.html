@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#F5F3ED" />
+
+    <meta
+      name="description"
+      content="AURA — Discover your potential. A thoughtfully designed onboarding experience."
+    />
+
+    <title>AURA — Discover More. Do More.</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- PARTICLE BACKGROUND -->
+
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <!-- APPLICATION -->
+
+    <main class="app-container">
+      <!-- NAVIGATION -->
+
+      <nav class="navbar">
+        <a href="#" class="brand" aria-label="AURA Home">
+          AURA<span>.</span>
+        </a>
+
+        <div class="nav-right">
+          <span class="nav-label"> THE BEGINNING OF SOMETHING NEW </span>
+
+          <button class="skip-button" id="skipBtn">
+            Skip Intro <span>↗</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- ONBOARDING SECTION -->
+
+      <section class="onboarding" id="onboarding">
+        <!-- LEFT CONTENT -->
+
+        <div class="content-section">
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+
+            <span id="eyebrowText"> A NEW WAY TO EXPERIENCE LIFE </span>
+          </div>
+
+          <div class="text-content">
+            <span class="slide-number" id="slideNumber"> 01 / 03 </span>
+
+            <h1 id="heading">
+              Discover your
+
+              <em>potential.</em>
+            </h1>
+
+            <p id="description">
+              Everything you need to organise your world, unlock your creativity
+              and make every day count.
+            </p>
+          </div>
+
+          <!-- PAGINATION -->
+
+          <div class="pagination" id="pagination">
+            <button
+              class="dot active"
+              data-slide="0"
+              aria-label="Go to slide 1"
+              aria-current="step"
+            ></button>
+
+            <button
+              class="dot"
+              data-slide="1"
+              aria-label="Go to slide 2"
+            ></button>
+
+            <button
+              class="dot"
+              data-slide="2"
+              aria-label="Go to slide 3"
+            ></button>
+          </div>
+
+          <!-- ACTION BUTTON -->
+
+          <div class="button-group">
+            <button class="primary-button" id="nextBtn">
+              <span id="buttonText"> Continue </span>
+
+              <span class="button-arrow"> ↗ </span>
+            </button>
+
+            <span class="keyboard-hint"> PRESS ENTER TO CONTINUE </span>
+          </div>
+        </div>
+
+        <!-- RIGHT VISUAL -->
+
+        <div class="visual-section">
+          <div class="visual-top-label">
+            <span>THE AURA EXPERIENCE</span>
+
+            <span id="visualNumber">01 — 03</span>
+          </div>
+
+          <div class="visual-stage" id="visualStage">
+            <!-- SLIDE 1 -->
+
+            <div class="visual-card active" data-visual="0">
+              <div class="artwork artwork-one">
+                <div class="artwork-index">FIG. 001</div>
+
+                <div class="artwork-heading">
+                  THINK
+
+                  <em>BEYOND.</em>
+                </div>
+
+                <div class="artwork-block block-one"></div>
+
+                <div class="artwork-block block-two"></div>
+
+                <div class="artwork-bottom">
+                  <span>01 / POSSIBILITY</span>
+
+                  <span>EST. 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+
+            <div class="visual-card" data-visual="1">
+              <div class="artwork artwork-two">
+                <div class="artwork-index">FIG. 002</div>
+
+                <div class="workspace-heading">
+                  YOUR SPACE.<br />
+                  YOUR RULES.
+                </div>
+
+                <div class="workspace-card">
+                  <div class="workspace-header">
+                    <span>MY WORKSPACE</span>
+
+                    <span>● ACTIVE</span>
+                  </div>
+
+                  <div class="workspace-task">
+                    <span>01</span>
+
+                    <strong>Organise your ideas</strong>
+
+                    <span>✓</span>
+                  </div>
+
+                  <div class="workspace-task">
+                    <span>02</span>
+
+                    <strong>Manage your projects</strong>
+
+                    <span>✓</span>
+                  </div>
+
+                  <div class="workspace-task">
+                    <span>03</span>
+
+                    <strong>Create something new</strong>
+
+                    <span>↗</span>
+                  </div>
+
+                  <div class="workspace-footer">
+                    MADE FOR YOUR NEXT BIG IDEA.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+
+            <div class="visual-card" data-visual="2">
+              <div class="artwork artwork-three">
+                <div class="artwork-index">FIG. 003</div>
+
+                <div class="final-heading">
+                  MAKE<br />
+
+                  IT <em>HAPPEN.</em>
+                </div>
+
+                <div class="final-divider"></div>
+
+                <div class="final-message">
+                  YOUR NEXT CHAPTER<br />
+                  STARTS RIGHT HERE.
+                </div>
+
+                <div class="final-number">∞</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="visual-bottom-label">
+            <span class="bottom-line"></span>
+
+            <span id="captionText"> THINK WITHOUT LIMITS. </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+
+      <footer class="footer">
+        <span> © 2026 AURA EXPERIENCE </span>
+
+        <span> DESIGNED WITH INTENTION. </span>
+      </footer>
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

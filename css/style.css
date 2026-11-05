@@ -1,0 +1,981 @@
+/* ==========================================
+   AURA — WARM EDITORIAL DESIGN SYSTEM
+========================================== */
+
+/* VARIABLES */
+
+:root {
+  --background: #f5f3ed;
+
+  --surface: #ffffff;
+
+  --primary: #171815;
+
+  --secondary: #85847d;
+
+  --sage: #899977;
+
+  --sage-light: #bbc9a4;
+
+  --border: #dfded5;
+
+  --heading-font:
+    "Bookman Old Style", "URW Bookman", "Cormorant Garamond", Georgia, serif;
+
+  --body-font: "Inter", sans-serif;
+}
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  background: var(--background);
+
+  color: var(--primary);
+
+  font-family: var(--body-font);
+
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ==========================================
+   PARTICLE BACKGROUND
+========================================== */
+
+#particleCanvas {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.app-container {
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 100vh;
+
+  max-width: 1600px;
+
+  margin: auto;
+
+  padding: 35px 7%;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.navbar {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: var(--heading-font);
+
+  font-size: 32px;
+
+  font-weight: 600;
+
+  letter-spacing: -1.5px;
+
+  text-decoration: none;
+
+  color: var(--primary);
+}
+
+.brand span {
+  color: var(--sage);
+}
+
+.nav-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+}
+
+.nav-label {
+  color: var(--secondary);
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+.skip-button {
+  padding: 12px 20px;
+
+  background: transparent;
+
+  border: 1px solid #17181530;
+
+  color: var(--primary);
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.skip-button span {
+  display: inline-block;
+
+  transition: transform 0.3s ease;
+}
+
+.skip-button:hover {
+  background: var(--primary);
+
+  color: white;
+}
+
+.skip-button:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* ==========================================
+   MAIN ONBOARDING LAYOUT
+========================================== */
+
+.onboarding {
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  padding: 65px 0;
+}
+
+/* ==========================================
+   LEFT CONTENT
+========================================== */
+
+.content-section {
+  max-width: 560px;
+
+  color: var(--primary);
+}
+
+.eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 40px;
+
+  color: var(--secondary);
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+.eyebrow-line {
+  width: 34px;
+
+  height: 1px;
+
+  background: var(--sage);
+}
+
+.text-content {
+  min-height: 285px;
+}
+
+.slide-number {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: var(--sage);
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+}
+
+h1 {
+  font-family: var(--heading-font);
+
+  font-size: clamp(50px, 5.2vw, 76px);
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  max-width: 560px;
+}
+
+h1 em {
+  display: block;
+
+  color: var(--sage);
+
+  font-weight: 400;
+}
+
+#description {
+  max-width: 420px;
+
+  margin-top: 30px;
+
+  color: #77766f;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+/* ==========================================
+   PAGINATION
+========================================== */
+
+.pagination {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 35px;
+}
+
+.dot {
+  width: 28px;
+
+  height: 3px;
+
+  border: none;
+
+  background: #17181525;
+
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+}
+
+.dot.active {
+  width: 55px;
+
+  background: var(--sage);
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.button-group {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 35px;
+}
+
+.primary-button {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 35px;
+
+  min-width: 180px;
+
+  padding: 17px 20px;
+
+  background: var(--sage);
+
+  border: 1px solid var(--sage);
+
+  color: var(--primary);
+
+  font-weight: 600;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  background: var(--sage-light);
+
+  border-color: var(--sage-light);
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px #89997730;
+}
+
+.button-arrow {
+  font-size: 19px;
+
+  transition: transform 0.3s ease;
+}
+
+.primary-button:hover .button-arrow {
+  transform: translate(4px, -3px);
+}
+
+.keyboard-hint {
+  color: #85847d;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   RIGHT VISUAL SECTION
+========================================== */
+
+.visual-section {
+  position: relative;
+
+  min-height: 480px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.visual-top-label {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: var(--secondary);
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+/* ==========================================
+   VISUAL STAGE
+========================================== */
+
+.visual-stage {
+  position: relative;
+
+  width: 100%;
+
+  height: 390px;
+
+  perspective: 1200px;
+}
+
+.visual-card {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(25px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    visibility 0.7s;
+}
+
+.visual-card.active {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+/* ==========================================
+   ARTWORK BASE
+========================================== */
+
+.artwork {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 440px;
+
+  height: 320px;
+
+  padding: 30px;
+
+  background: var(--surface);
+
+  color: var(--primary);
+
+  border: 1px solid #17181510;
+
+  box-shadow: 15px 20px 60px #17181512;
+
+  overflow: hidden;
+
+  transition: transform 0.5s ease;
+}
+
+.artwork:hover {
+  transform: translateY(-7px);
+}
+
+.artwork-index {
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: var(--secondary);
+}
+
+/* ==========================================
+   SLIDE 1 — THINK BEYOND
+========================================== */
+
+.artwork-one {
+  background: #ffffff;
+}
+
+.artwork-heading {
+  position: absolute;
+
+  top: 75px;
+
+  left: 35px;
+
+  font-family: var(--heading-font);
+
+  font-size: clamp(48px, 5vw, 65px);
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+
+  z-index: 2;
+}
+
+.artwork-heading em {
+  display: block;
+
+  color: var(--sage);
+
+  font-weight: 400;
+}
+
+.artwork-block {
+  position: absolute;
+
+  background: #171815;
+
+  transition: transform 0.5s ease;
+}
+
+.block-one {
+  width: 90px;
+
+  height: 110px;
+
+  right: 45px;
+
+  top: 70px;
+}
+
+.block-two {
+  width: 130px;
+
+  height: 65px;
+
+  right: 90px;
+
+  bottom: 55px;
+
+  background: #a3b18a;
+}
+
+.artwork-one:hover .block-one {
+  transform: translateY(-10px);
+}
+
+.artwork-one:hover .block-two {
+  transform: translateY(10px);
+}
+
+.artwork-bottom {
+  position: absolute;
+
+  bottom: 25px;
+
+  left: 30px;
+
+  right: 30px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   SLIDE 2 — YOUR SPACE
+========================================== */
+
+.artwork-two {
+  background: #171815;
+
+  color: white;
+}
+
+.workspace-heading {
+  margin-top: 25px;
+
+  font-family: var(--heading-font);
+
+  font-size: 30px;
+
+  line-height: 1.1;
+}
+
+.workspace-card {
+  margin-top: 20px;
+
+  padding: 15px;
+
+  background: #f5f3ed;
+
+  color: #171815;
+}
+
+.workspace-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #00000020;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+}
+
+.workspace-header span:last-child {
+  color: var(--sage);
+}
+
+.workspace-task {
+  display: grid;
+
+  grid-template-columns: 25px 1fr 20px;
+
+  align-items: center;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid #00000012;
+
+  font-size: 10px;
+}
+
+.workspace-task span {
+  color: var(--sage);
+}
+
+.workspace-task strong {
+  font-weight: 500;
+}
+
+.workspace-footer {
+  margin-top: 12px;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+
+  color: #77766f;
+}
+
+/* ==========================================
+   SLIDE 3 — MAKE IT HAPPEN
+========================================== */
+
+.artwork-three {
+  background: #a3b18a;
+}
+
+.final-heading {
+  margin-top: 55px;
+
+  font-family: var(--heading-font);
+
+  font-size: 67px;
+
+  line-height: 0.9;
+
+  letter-spacing: -3px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.final-heading em {
+  color: white;
+
+  font-weight: 400;
+}
+
+.final-divider {
+  width: 100%;
+
+  height: 1px;
+
+  background: #00000050;
+
+  margin-top: 30px;
+}
+
+.final-message {
+  margin-top: 15px;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  line-height: 1.8;
+}
+
+.final-number {
+  position: absolute;
+
+  right: 25px;
+
+  bottom: 15px;
+
+  font-family: Georgia, serif;
+
+  font-size: 105px;
+
+  opacity: 0.12;
+}
+
+/* ==========================================
+   VISUAL BOTTOM LABEL
+========================================== */
+
+.visual-bottom-label {
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--secondary);
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+.bottom-line {
+  width: 34px;
+
+  height: 1px;
+
+  background: var(--sage);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 22px;
+
+  border-top: 1px solid var(--border);
+
+  color: #77766f;
+
+  font-size: 8px;
+
+  letter-spacing: 1.5px;
+}
+
+/* ==========================================
+   FINISH SCREEN
+========================================== */
+
+.finish-heading {
+  font-family: var(--heading-font);
+
+  font-size: clamp(50px, 5.2vw, 76px);
+
+  line-height: 1.05;
+
+  font-weight: 500;
+}
+
+.finish-heading em {
+  display: block;
+
+  color: var(--sage);
+
+  font-weight: 400;
+}
+
+.finish-artwork {
+  width: 100%;
+
+  max-width: 440px;
+
+  min-height: 320px;
+
+  padding: 30px;
+
+  background: var(--sage);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.finish-artwork h2 {
+  font-family: var(--heading-font);
+
+  font-size: 60px;
+
+  line-height: 0.95;
+
+  font-weight: 500;
+}
+
+.finish-artwork h2 em {
+  color: white;
+
+  font-weight: 400;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 950px) {
+  .app-container {
+    padding: 30px 5%;
+  }
+
+  .onboarding {
+    gap: 35px;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  .artwork-heading,
+  .final-heading {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 650px) {
+  .app-container {
+    padding: 25px 22px;
+  }
+
+  .nav-label,
+  .keyboard-hint {
+    display: none;
+  }
+
+  .onboarding {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 55px 0 40px;
+  }
+
+  .content-section {
+    order: 1;
+  }
+
+  .visual-section {
+    order: 2;
+
+    min-height: 370px;
+  }
+
+  .text-content {
+    min-height: auto;
+  }
+
+  h1 {
+    font-size: 51px;
+  }
+
+  #description {
+    font-size: 13px;
+  }
+
+  .pagination {
+    margin-top: 28px;
+  }
+
+  .artwork {
+    max-width: 420px;
+
+    height: 300px;
+  }
+
+  .artwork-heading,
+  .final-heading {
+    font-size: 55px;
+  }
+
+  .footer {
+    gap: 15px;
+
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 43px;
+  }
+
+  .artwork-heading,
+  .final-heading {
+    font-size: 45px;
+  }
+
+  .artwork {
+    padding: 20px;
+  }
+
+  .artwork-block.block-one {
+    right: 20px;
+
+    width: 65px;
+  }
+
+  .artwork-block.block-two {
+    right: 60px;
+
+    width: 100px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+button:focus-visible {
+  outline: 2px solid var(--sage);
+
+  outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+}
