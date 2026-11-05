@@ -86,7 +86,6 @@ aura-onboarding-ui/
 - **Project:** AURA — Onboarding UI Design
 - **Category:** UI/UX Design
 - **Difficulty:** Easy
-- **Internship:** Pynexia Technology
 - **Year:** 2026
 
 ---
