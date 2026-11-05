@@ -31,6 +31,7 @@ AURA features a sophisticated editorial-inspired interface with a warm ivory bac
 | CSS3        | Styling, animations and responsive layouts |
 | JavaScript  | Interactions and dynamic functionality     |
 | HTML Canvas | Animated particle background               |
+| Figma       | Designing Structure                        |
 
 ## Project Structure
 
